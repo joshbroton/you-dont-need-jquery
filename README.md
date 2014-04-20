@@ -1,4 +1,4 @@
-you-dont-need-jquery
+You Don't Need jQuery
 ====================
 
-Slides and not-jquery Library
+Slides for my newest talk and not-jquery Library.
