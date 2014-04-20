@@ -4,17 +4,17 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    "demo/css/styles.css": "demo/scss/styles.scss"
+                    "css/styles.css": "scss/styles.scss"
                 }
             }
         },
         watch: {
             livereload: {
                 options: { livereload: true },
-                files: ['demo/css/*.css', 'demo/demo.html']
+                files: ['css/*.css', 'index.html']
             },
             sass: {
-                files: 'demo/scss/*.scss',
+                files: 'scss/*.scss',
                 tasks: ['sass']
             }
         },
@@ -40,14 +40,14 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'demo/js/not-jquery.min.js': 'demo/js/not-jquery.js'
+                    'js/not-jquery.min.js': 'js/not-jquery.js'
                 }
             }
         },
         cssmin: {
             combine: {
                 files: {
-                    'demo/css/styles.min.css': 'demo/css/styles.css'
+                    'css/styles.min.css': 'css/styles.css'
                 }
             }
         }
