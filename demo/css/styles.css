@@ -1,0 +1,277 @@
+/*
+	Outputs classes (.columns-#) for each column <= $nbrOfColumns in _variables.scss
+	<div class="columns-6"></div> is 50% width in a 12-column layout
+*/
+.columns-1, .columns-2, .columns-3, .columns-4, .columns-5, .columns-6, .columns-7, .columns-8, .columns-9, .columns-10, .columns-11, .columns-12 {
+  width: 100%; }
+
+@media only screen and (min-width: 64em) {
+  .columns-1 {
+    float: left;
+    width: 8.33333%;
+    padding: 0 0.625em; }
+
+  .columns-2 {
+    float: left;
+    width: 16.66667%;
+    padding: 0 0.625em; }
+
+  .columns-3 {
+    float: left;
+    width: 25%;
+    padding: 0 0.625em; }
+
+  .columns-4 {
+    float: left;
+    width: 33.33333%;
+    padding: 0 0.625em; }
+
+  .columns-5 {
+    float: left;
+    width: 41.66667%;
+    padding: 0 0.625em; }
+
+  .columns-6 {
+    float: left;
+    width: 50%;
+    padding: 0 0.625em; }
+
+  .columns-7 {
+    float: left;
+    width: 58.33333%;
+    padding: 0 0.625em; }
+
+  .columns-8 {
+    float: left;
+    width: 66.66667%;
+    padding: 0 0.625em; }
+
+  .columns-9 {
+    float: left;
+    width: 75%;
+    padding: 0 0.625em; }
+
+  .columns-10 {
+    float: left;
+    width: 83.33333%;
+    padding: 0 0.625em; }
+
+  .columns-11 {
+    float: left;
+    width: 91.66667%;
+    padding: 0 0.625em; }
+
+  .columns-12 {
+    float: left;
+    width: 100%;
+    padding: 0 0.625em; } }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 100%;
+  padding: 3em 0 0 3em; }
+
+.testDiv {
+  display: inline-block;
+  position: relative;
+  margin: 0 1em 1em 0;
+  padding: 2em 1.75em;
+  background: red;
+  text-align: center; }
+
+#divAddClass {
+  background: red; }
+  #divAddClass.animate {
+    -webkit-animation: addClass 2s infinite linear;
+    -moz-animation: addClass 2s infinite linear;
+    -o-animation: addClass 2s infinite linear;
+    animation: addClass 2s infinite linear; }
+
+#divToggleClass {
+  background: blue;
+  color: white; }
+  #divToggleClass.animate {
+    -webkit-animation: toggleClass 2s infinite linear;
+    -moz-animation: toggleClass 2s infinite linear;
+    -o-animation: toggleClass 2s infinite linear;
+    animation: toggleClass 2s infinite linear; }
+
+#divShowHide {
+  background: orange; }
+
+@-webkit-keyframes addClass {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(-2em, -2em);
+    -moz-transform: translate(-2em, -2em);
+    -ms-transform: translate(-2em, -2em);
+    -o-transform: translate(-2em, -2em);
+    transform: translate(-2em, -2em); }
+
+  75% {
+    -webkit-transform: translate(2em, 2em);
+    -moz-transform: translate(2em, 2em);
+    -ms-transform: translate(2em, 2em);
+    -o-transform: translate(2em, 2em);
+    transform: translate(2em, 2em); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-moz-keyframes addClass {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(-2em, -2em);
+    -moz-transform: translate(-2em, -2em);
+    -ms-transform: translate(-2em, -2em);
+    -o-transform: translate(-2em, -2em);
+    transform: translate(-2em, -2em); }
+
+  75% {
+    -webkit-transform: translate(2em, 2em);
+    -moz-transform: translate(2em, 2em);
+    -ms-transform: translate(2em, 2em);
+    -o-transform: translate(2em, 2em);
+    transform: translate(2em, 2em); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-o-keyframes addClass {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(-2em, -2em);
+    -moz-transform: translate(-2em, -2em);
+    -ms-transform: translate(-2em, -2em);
+    -o-transform: translate(-2em, -2em);
+    transform: translate(-2em, -2em); }
+
+  75% {
+    -webkit-transform: translate(2em, 2em);
+    -moz-transform: translate(2em, 2em);
+    -ms-transform: translate(2em, 2em);
+    -o-transform: translate(2em, 2em);
+    transform: translate(2em, 2em); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes addClass {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(-2em, -2em);
+    -moz-transform: translate(-2em, -2em);
+    -ms-transform: translate(-2em, -2em);
+    -o-transform: translate(-2em, -2em);
+    transform: translate(-2em, -2em); }
+
+  75% {
+    -webkit-transform: translate(2em, 2em);
+    -moz-transform: translate(2em, 2em);
+    -ms-transform: translate(2em, 2em);
+    -o-transform: translate(2em, 2em);
+    transform: translate(2em, 2em); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes toggleClass {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes toggleClass {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-o-keyframes toggleClass {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes toggleClass {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }

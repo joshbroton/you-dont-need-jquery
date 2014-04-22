@@ -1,3 +1,7 @@
+function getById(id) {
+    return document.getElementById(id);
+}
+
 Element.prototype.addClass = function(className) {
     if(this.hasClass(className) == false) {
         this.className += ' ' + className;
@@ -19,6 +23,14 @@ Element.prototype.hasClass = function(className) {
     }
 
     return false;
+}
+
+Element.prototype.toggleClass = function(className) {
+    if(this.hasClass(className)) {
+        this.removeClass(className);
+    } else {
+        this.addClass(className);
+    }
 }
 
 Element.prototype.show = function(speed) {
@@ -52,6 +64,7 @@ Element.prototype.show = function(speed) {
 
         if(count === max) {
             clearInterval(interval);
+            el.style.opacity = '';
         }
     }
 }
@@ -88,6 +101,7 @@ Element.prototype.hide = function(speed) {
         if(count === max) {
             clearInterval(interval);
             el.style.display = 'none';
+            el.style.opacity = '';
         }
     }
 }
@@ -100,8 +114,44 @@ Element.prototype.before = function(str) {
     this.insertAdjacentHTML('beforebegin', str);
 }
 
+Element.prototype.prepend = function(el) {
+    if(el.nodeType) {
+        this.insertBefore(el, this.firstChild);
+    } else {
+        this.insertAdjacentHTML('afterbegin', el);
+    }
+}
+
 Element.prototype.append = function(el) {
-    this.appendChild(el);
+    if(el.nodeType) {
+        this.appendChild(el);
+    } else {
+        this.insertAdjacentHTML('beforeend', el);
+    }
+}
+
+Element.prototype.prependTo = function(el) {
+    el.insertBefore(this, el.firstChild);
+}
+
+Element.prototype.appendTo = function(el) {
+    el.appendChild(this);
+}
+
+Element.prototype.listen = function(event, callback) {
+    if(this.attachEvent) {
+        this.attachEvent("on" + event, function() {callback.call(this);});
+    } else if(this.addEventListener) {
+        this.addEventListener(event, callback, false);
+    }
+};
+
+Element.prototype.css = function(attribute, value) {
+    if(value) {
+        this.style[attribute] = value;
+    } else {
+        return window.getComputedStyle(this).getPropertyValue(attribute);
+    }
 }
 
 NodeList.prototype.addClass = function(className) {
@@ -135,6 +185,24 @@ NodeList.prototype.hide = function(speed) {
 NodeList.prototype.show = function(speed) {
     for(var i = 0, len = this.length; i < len; i++) {
         this[i].show(speed);
+    }
+}
+
+NodeList.prototype.listen = function(event, callback) {
+    for(var i = 0, len = this.length; i < len; i++) {
+        this[i].listen(event, callback);
+    }
+}
+
+NodeList.prototype.prependTo = function(el) {
+    for(var i = 0, len = this.length; i < len; i++) {
+        this[i].prependTo(el);
+    }
+}
+
+NodeList.prototype.appendTo = function(el) {
+    for(var i = 0, len = this.length; i < len; i++) {
+        this[i].appendTo(el);
     }
 }
 
